@@ -1,3 +1,13 @@
+# Hotel
+Es handelt sich dabei um eine einfache Hotelverwaltung 
+zwischen den Personen (Mitarbeiter, Gast) und dem Hotel.
+**Klassendiagramm ist momentan falsch! (Booking fehlt, un-, direktional)**
+
+![ERD](images/ERD.png)
+![CLD](images/CLD.png)
+
+
+
 # 1819_4bhif_nvs_assignment06_jpa
 Übungsbeispiel mit individueller Aufgabenstellung zum Thema JPA
 
