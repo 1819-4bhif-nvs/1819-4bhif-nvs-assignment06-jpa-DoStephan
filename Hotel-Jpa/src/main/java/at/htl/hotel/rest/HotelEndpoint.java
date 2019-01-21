@@ -34,6 +34,9 @@ public class HotelEndpoint {
     @Path("{id}")
     public Response get(@PathParam("id") Long id) {
         Hotel hotel = em.find(Hotel.class,id);
-        return Response.ok().entity(hotel).build();
+        if(hotel == null)
+            return Response.noContent().entity(hotel).build();
+        else
+            return Response.ok().entity(hotel).build();
     }
 }

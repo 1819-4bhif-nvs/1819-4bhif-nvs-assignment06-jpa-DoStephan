@@ -1,9 +1,6 @@
 package at.htl.hotel.business;
 
-import at.htl.hotel.model.Employee;
-import at.htl.hotel.model.Guest;
-import at.htl.hotel.model.Hotel;
-import at.htl.hotel.model.Room;
+import at.htl.hotel.model.*;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
@@ -24,13 +21,27 @@ public class InitBean {
         initHotels();
         initRooms();
         initGuests();
+        initBookings();
         initEmployees();
     }
 
+    private void initBookings() {
+        Booking b1 = new Booking("29.02.2018",5,
+                em.find(Guest.class,2L), em.find(Room.class,3L));
+        Booking b2 = new Booking("07.12.2018",3,
+                em.find(Guest.class,1L), em.find(Room.class,1L));
+        Booking b3 = new Booking("07.06.2018",4,
+                em.find(Guest.class,3L), em.find(Room.class,0L));
+
+        em.persist(b1);
+        em.persist(b2);
+        em.persist(b3);
+    }
+
     private void initGuests() {
-        Guest g1 = new Guest("Robert E", 29, "29.02.2018",5);
-        Guest g2 = new Guest("Jonathan J", 19, "07.12.2018",3);
-        Guest g3 = new Guest("Josef J", 52, "07.06.2018",4);
+        Guest g1 = new Guest("Robert E", 29);
+        Guest g2 = new Guest("Jonathan J", 19);
+        Guest g3 = new Guest("Josef J", 52);
         em.persist(g1);
         em.persist(g2);
         em.persist(g3);
@@ -45,12 +56,12 @@ public class InitBean {
 
     private void initRooms() {
         Room[] roomArray = {
-            new Room(101, 2, 165),
-            new Room(115, 3, 180),
-            new Room(201, 2, 120),
-            new Room(117, 2, 150),
-            new Room(309, 1, 100),
-            new Room(215, 2, 145)
+            new Room(101, 2, 165, em.find(Hotel.class, 1L)),
+            new Room(115, 3, 180, em.find(Hotel.class, 1L)),
+            new Room(201, 2, 120, em.find(Hotel.class, 3L)),
+            new Room(117, 2, 150, em.find(Hotel.class, 1L)),
+            new Room(309, 1, 100, em.find(Hotel.class, 2L)),
+            new Room(215, 2, 145, em.find(Hotel.class, 3L))
         };
 
         for (Room r : roomArray){

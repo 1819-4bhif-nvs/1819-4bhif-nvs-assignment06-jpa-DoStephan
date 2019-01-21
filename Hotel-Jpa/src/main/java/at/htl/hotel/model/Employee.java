@@ -2,6 +2,7 @@ package at.htl.hotel.model;
 
 import javax.persistence.*;
 import javax.ws.rs.Path;
+import java.util.List;
 
 @Entity
 public class Employee extends Person {
@@ -11,6 +12,8 @@ public class Employee extends Person {
     private int salary;
     private String worktype;
 
+    @ManyToOne
+    private Hotel hotel;
 
 
     public Employee() {
@@ -37,4 +40,5 @@ public class Employee extends Person {
     public void setWorktype(String worktype) {
         this.worktype = worktype;
     }
+
 }

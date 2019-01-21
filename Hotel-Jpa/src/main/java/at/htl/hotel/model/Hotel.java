@@ -16,12 +16,14 @@ public class Hotel {
     private double rating;
     private int star;
 
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    //(mappedBy = "hotel", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @Transient
+    private List<Room> rooms;
 
-    //@OneToMany(cascade = CascadeType.ALL)
-    //@JoinColumn(name = "hotel_id")
-    //private List<Room> rooms;
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
 
-
+    private List<Employee> employees;
 
     //region Construct
     public Hotel() {
@@ -64,16 +66,21 @@ public class Hotel {
         this.star = star;
     }
 
+    public double getRating() {
+        return rating;
+    }
+
     public void setRating(double rating) {
         this.rating = rating;
     }
 
-//    public List<Room> getRooms() {
-//        return rooms;
-//    }
-//
-//    public void setRooms(List<Room> rooms) {
-//        this.rooms = rooms;
-//    }
+    public List<Room> getRooms() {
+        return rooms;
+    }
+
+    public void setRooms(List<Room> rooms) {
+        this.rooms = rooms;
+    }
+
     //endregion
 }

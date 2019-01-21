@@ -1,7 +1,6 @@
 package at.htl.hotel.rest;
 
 import at.htl.hotel.model.Guest;
-import at.htl.hotel.model.Guest;
 import at.htl.hotel.model.Person;
 
 import javax.ejb.Stateless;
@@ -46,7 +45,7 @@ public class GuestEndpoint {
     @Path("update/{id}")
     public void update(@PathParam("id") Long id) {
         Guest guest = em.find(Guest.class,id);
-        guest.setStayspan(6);
+
         em.merge(guest);
         System.out.println(guest.getName() + "wurde verändert");
     }

@@ -1,6 +1,8 @@
 package at.htl.hotel.model;
 
 import javax.persistence.*;
+import java.util.jar.Attributes;
+
 @Entity
 @NamedQueries({
         @NamedQuery(name = "Employee.getAll", query = "select e from Person e where e.dType like 'Employee'"),
@@ -13,15 +15,13 @@ import javax.persistence.*;
 public class Person {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "PERSON_ID")
     private Long id;
     private String name;
     private int age;
 
     @Column(name = "DTYPE", insertable = false, updatable = false)
     private String dType;
-
-    @ManyToOne
-    private Hotel hotel;
 
     public Person() {
     }
@@ -56,11 +56,4 @@ public class Person {
         this.dType = dType;
     }
 
-    public Hotel getHotel() {
-        return hotel;
-    }
-
-    public void setHotel(Hotel hotel) {
-        this.hotel = hotel;
-    }
 }

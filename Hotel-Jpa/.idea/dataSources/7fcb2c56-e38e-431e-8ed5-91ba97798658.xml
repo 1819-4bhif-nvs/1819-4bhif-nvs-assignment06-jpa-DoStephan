@@ -18,183 +18,255 @@
     <schema id="10" parent="1" name="SYSIBM"/>
     <schema id="11" parent="1" name="SYSPROC"/>
     <schema id="12" parent="1" name="SYSSTAT"/>
-    <table id="13" parent="2" name="EMPLOYEE"/>
-    <table id="14" parent="2" name="GUEST"/>
-    <table id="15" parent="2" name="HOTEL"/>
-    <table id="16" parent="2" name="PERSON"/>
-    <table id="17" parent="2" name="ROOM"/>
-    <column id="18" parent="13" name="SALARY">
-      <Position>1</Position>
-      <DataType>INTEGER|4s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="19" parent="13" name="WORKTYPE">
-      <Position>2</Position>
-      <DataType>VARCHAR(255)|12s</DataType>
-    </column>
-    <column id="20" parent="13" name="PERSON_ID">
-      <Position>3</Position>
-      <DataType>BIGINT|-5s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="21" parent="13" name="SQL190121020106220">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>PERSON_ID</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="22" parent="13" name="SQL190121020106390">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>PERSON_ID</ColNames>
-    </index>
-    <key id="23" parent="13" name="SQL190121020106220">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>PERSON_ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="24" parent="13" name="FK7C7Q6UI4JEMK0OV656IP5DH29">
-      <ColNames>PERSON_ID</ColNames>
-      <RefSchemaName>APP</RefSchemaName>
-      <RefTableName>PERSON</RefTableName>
-      <RefKeyName>SQL190121020106310</RefKeyName>
-      <RefColNames>PERSON_ID</RefColNames>
-    </foreign-key>
-    <column id="25" parent="14" name="PERSON_ID">
-      <Position>1</Position>
-      <DataType>BIGINT|-5s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="26" parent="14" name="SQL190121020106260">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>PERSON_ID</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="27" parent="14" name="SQL190121020106420">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>PERSON_ID</ColNames>
-    </index>
-    <key id="28" parent="14" name="SQL190121020106260">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>PERSON_ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="29" parent="14" name="FKIL3Q1XBN57AJGT9CEVD728NXI">
-      <ColNames>PERSON_ID</ColNames>
-      <RefSchemaName>APP</RefSchemaName>
-      <RefTableName>PERSON</RefTableName>
-      <RefKeyName>SQL190121020106310</RefKeyName>
-      <RefColNames>PERSON_ID</RefColNames>
-    </foreign-key>
-    <column id="30" parent="15" name="ID">
+    <table id="13" parent="2" name="BOOKING"/>
+    <table id="14" parent="2" name="EMPLOYEE"/>
+    <table id="15" parent="2" name="GUEST"/>
+    <table id="16" parent="2" name="HOTEL"/>
+    <table id="17" parent="2" name="PERSON"/>
+    <table id="18" parent="2" name="ROOM"/>
+    <column id="19" parent="13" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="31" parent="15" name="LOCATION">
+    <column id="20" parent="13" name="CHECKINDATE">
       <Position>2</Position>
-      <DataType>VARCHAR(255)|12s</DataType>
+      <DataType>TIMESTAMP|93s</DataType>
     </column>
-    <column id="32" parent="15" name="NAME">
+    <column id="21" parent="13" name="STAYSPAN">
       <Position>3</Position>
-      <DataType>VARCHAR(255)|12s</DataType>
-    </column>
-    <column id="33" parent="15" name="RATING">
-      <Position>4</Position>
-      <DataType>DOUBLE|8s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="34" parent="15" name="STAR">
-      <Position>5</Position>
       <DataType>INTEGER|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="35" parent="15" name="SQL190121020106290">
+    <column id="22" parent="13" name="GUEST_PERSON_ID">
+      <Position>4</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <column id="23" parent="13" name="ROOM_ROOM_ID">
+      <Position>5</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <index id="24" parent="13" name="SQL190121033208650">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="36" parent="15" name="SQL190121020106290">
+    <index id="25" parent="13" name="SQL190121033208870">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>GUEST_PERSON_ID</ColNames>
+    </index>
+    <index id="26" parent="13" name="SQL190121033208890">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ROOM_ROOM_ID</ColNames>
+    </index>
+    <key id="27" parent="13" name="SQL190121033208650">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="37" parent="16" name="DTYPE">
+    <foreign-key id="28" parent="13" name="FKPTGVTPRG43B436M5MCHP6U7M1">
+      <ColNames>GUEST_PERSON_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>GUEST</RefTableName>
+      <RefKeyName>SQL190121033208700</RefKeyName>
+      <RefColNames>PERSON_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="29" parent="13" name="FKPRE8BQNRQOMFC0A8S3PJLEKUW">
+      <ColNames>ROOM_ROOM_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>ROOM</RefTableName>
+      <RefKeyName>SQL190121033208810</RefKeyName>
+      <RefColNames>ROOM_ID</RefColNames>
+    </foreign-key>
+    <column id="30" parent="14" name="SALARY">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="14" name="WORKTYPE">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="32" parent="14" name="PERSON_ID">
+      <Position>3</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="14" name="HOTEL_ID">
+      <Position>4</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <index id="34" parent="14" name="SQL190121033208680">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PERSON_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="35" parent="14" name="SQL190121033208940">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PERSON_ID</ColNames>
+    </index>
+    <index id="36" parent="14" name="SQL190121033208920">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>HOTEL_ID</ColNames>
+    </index>
+    <key id="37" parent="14" name="SQL190121033208680">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PERSON_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="38" parent="14" name="FK7C7Q6UI4JEMK0OV656IP5DH29">
+      <ColNames>PERSON_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>PERSON</RefTableName>
+      <RefKeyName>SQL190121033208780</RefKeyName>
+      <RefColNames>PERSON_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="39" parent="14" name="FKCPU2BS7PUISRIDUDFGPK30KD2">
+      <ColNames>HOTEL_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>HOTEL</RefTableName>
+      <RefKeyName>SQL190121033208730</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="40" parent="15" name="PERSON_ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="41" parent="15" name="SQL190121033208700">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PERSON_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="42" parent="15" name="SQL190121033208950">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PERSON_ID</ColNames>
+    </index>
+    <key id="43" parent="15" name="SQL190121033208700">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PERSON_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="44" parent="15" name="FKIL3Q1XBN57AJGT9CEVD728NXI">
+      <ColNames>PERSON_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>PERSON</RefTableName>
+      <RefKeyName>SQL190121033208780</RefKeyName>
+      <RefColNames>PERSON_ID</RefColNames>
+    </foreign-key>
+    <column id="45" parent="16" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
+    </column>
+    <column id="46" parent="16" name="LOCATION">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="47" parent="16" name="NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="48" parent="16" name="RATING">
+      <Position>4</Position>
+      <DataType>DOUBLE|8s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="16" name="STAR">
+      <Position>5</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="50" parent="16" name="SQL190121033208730">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="51" parent="16" name="SQL190121033208730">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="17" name="DTYPE">
       <Position>1</Position>
       <DataType>VARCHAR(31)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="38" parent="16" name="PERSON_ID">
+    <column id="53" parent="17" name="PERSON_ID">
       <Position>2</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="39" parent="16" name="AGE">
+    <column id="54" parent="17" name="AGE">
       <Position>3</Position>
       <DataType>INTEGER|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="16" name="NAME">
+    <column id="55" parent="17" name="NAME">
       <Position>4</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <index id="41" parent="16" name="SQL190121020106310">
+    <index id="56" parent="17" name="SQL190121033208780">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>PERSON_ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="42" parent="16" name="SQL190121020106310">
+    <key id="57" parent="17" name="SQL190121033208780">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>PERSON_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="43" parent="17" name="ROOM_ID">
+    <column id="58" parent="18" name="ROOM_ID">
       <Position>1</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="44" parent="17" name="BEDAMOUNT">
+    <column id="59" parent="18" name="BEDAMOUNT">
       <Position>2</Position>
       <DataType>INTEGER|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="45" parent="17" name="PRICE">
+    <column id="60" parent="18" name="PRICE">
       <Position>3</Position>
       <DataType>DOUBLE|8s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="46" parent="17" name="ROOMNR">
+    <column id="61" parent="18" name="ROOMNR">
       <Position>4</Position>
       <DataType>INTEGER|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="17" name="HOTEL_ID">
+    <column id="62" parent="18" name="HOTEL_ID">
       <Position>5</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <index id="48" parent="17" name="SQL190121020106340">
+    <index id="63" parent="18" name="SQL190121033208810">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ROOM_ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="49" parent="17" name="SQL190121020106421">
+    <index id="64" parent="18" name="SQL190121033209030">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>HOTEL_ID</ColNames>
     </index>
-    <key id="50" parent="17" name="SQL190121020106340">
+    <key id="65" parent="18" name="SQL190121033208810">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ROOM_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="51" parent="17" name="FK2YTUA4FDW8IBYYN44AR9TXTKU">
+    <foreign-key id="66" parent="18" name="FK2YTUA4FDW8IBYYN44AR9TXTKU">
       <ColNames>HOTEL_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>HOTEL</RefTableName>
-      <RefKeyName>SQL190121020106290</RefKeyName>
+      <RefKeyName>SQL190121033208730</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
   </database-model>

@@ -1,6 +1,7 @@
 package at.htl.hotel.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @NamedQueries({
@@ -10,6 +11,7 @@ import javax.persistence.*;
 public class Room {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ROOM_ID")
     private Long id;
     private int roomNr;
     private int bedAmount;
@@ -18,13 +20,18 @@ public class Room {
     @ManyToOne
     private Hotel hotel;
 
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @Transient
+    private List<Booking> bookings;
+
     public Room() {
     }
 
-    public Room(int roomNr, int bedAmount, double price) {
+    public Room(int roomNr, int bedAmount, double price, Hotel hotel) {
         this.roomNr = roomNr;
         this.bedAmount = bedAmount;
         this.price = price;
+        this.hotel = hotel;
     }
 
     public Long getId() {
@@ -55,4 +62,19 @@ public class Room {
         this.price = price;
     }
 
+    public Hotel getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
+    }
 }
