@@ -1,7 +1,6 @@
 # Hotel
 Es handelt sich dabei um eine einfache Hotelverwaltung 
 zwischen den Personen (Mitarbeiter, Gast) und dem Hotel.
-**Klassendiagramm ist momentan falsch! (Booking fehlt, un-, direktional)**
 
 # ERD
 ![ERD](images/ERD.png)
