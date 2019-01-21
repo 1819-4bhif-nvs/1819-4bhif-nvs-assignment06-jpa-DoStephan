@@ -7,21 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95780b5f-0712-4c1c-804c-14dec3e21087" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Hotel-Jpa-St/src/test/java/at/htl/hotel/BookingEndpointIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hotel-Jpa-St/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel-Jpa-St/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hotel-Jpa-St/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel-Jpa-St/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10c44a71-f3b6-4d88-9774-98ef79cadc1f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10c44a71-f3b6-4d88-9774-98ef79cadc1f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hotel-Jpa-St/src/test/java/at/htl/hotel/HotelEndpointIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hotel-Jpa-St/src/test/java/at/htl/hotel/HotelEndpointIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/hotel/business/InitBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/hotel/business/InitBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/hotel/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/hotel/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/hotel/model/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/hotel/model/Guest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/hotel/model/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/hotel/model/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/hotel/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/hotel/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/hotel/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/hotel/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/hotel/rest/GuestEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/hotel/rest/GuestEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/hotel/rest/HotelEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/hotel/rest/HotelEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -406,7 +396,7 @@
     <property name="DatabaseDriversLRU" value="h2&#10;derby" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548038337740" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548039500452" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Hotel-Jpa-St" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -520,12 +510,12 @@
       <workItem from="1547065359315" duration="28000" />
       <workItem from="1547065459147" duration="2151000" />
       <workItem from="1547456566298" duration="600000" />
-      <workItem from="1548012553403" duration="20789000" />
+      <workItem from="1548012553403" duration="21389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70352000" />
+    <option name="totallyTimeSpent" value="70952000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

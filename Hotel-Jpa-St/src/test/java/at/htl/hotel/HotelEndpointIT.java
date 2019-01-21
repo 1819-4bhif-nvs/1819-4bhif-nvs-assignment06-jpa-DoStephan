@@ -48,7 +48,7 @@ public class HotelEndpointIT {
 //        Response response = this.target
 //                .request(MediaType.APPLICATION_JSON).delete();
 //        assertThat(response.getStatus(), is(204));
-//
+//        //getting error status code 405 instead
 //    }
 
 }
