@@ -3,6 +3,7 @@ package at.htl.hotel.rest;
 import at.htl.hotel.model.Employee;
 import at.htl.hotel.model.Hotel;
 import at.htl.hotel.model.Person;
+import io.swagger.annotations.Api;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -18,6 +19,7 @@ import java.util.List;
 
 @Path("hotel")
 @Stateless
+@Api(value = "HotelEndpoint")
 public class HotelEndpoint {
     @PersistenceContext
     EntityManager em;

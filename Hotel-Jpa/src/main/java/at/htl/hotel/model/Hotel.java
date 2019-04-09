@@ -36,7 +36,10 @@ public class Hotel {
         this.star = star;
     }
     //endregion
-
+    //export JAVA_HOME/jdk
+    //ln -s /path/ postman
+    //swagger openapi
+    //openapi gui
     //region Getter Setter
     public Long getId() {
         return id;
